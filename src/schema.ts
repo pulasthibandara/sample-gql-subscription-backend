@@ -1,10 +1,12 @@
 import { makeExecutableSchema } from 'graphql-tools';
 import gql from 'graphql-tag';
 
+import { userSchema, userResolvers } from './user/schema';
+
 const rootSchema: string[] = [
   gql`
     type Query {
-      test: String
+      user: User
     }
 
     # type Mutations {}
@@ -15,14 +17,14 @@ const rootSchema: string[] = [
 
 const rootResolvers = {
   Query: {
-    test() {
-      return 'test val';
+    user() {
+      return { id: '12345', email: 'test@email.com' };
     },
   },
 };
 
-const typeDefs = [...rootSchema];
-const resolvers = rootResolvers;
+const typeDefs = [...rootSchema, ...userSchema];
+const resolvers = { ...rootResolvers, ...userResolvers };
 
 export default makeExecutableSchema({
   typeDefs,

@@ -15,6 +15,4 @@ export const userSchema: string[] = [
   `,
 ];
 
-export const userResolvers = {
-  
-};
+export const userResolvers = {};

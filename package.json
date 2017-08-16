@@ -13,6 +13,8 @@
     "@types/koa": "^2.0.39",
     "@types/koa-bodyparser": "^3.0.23",
     "@types/koa-router": "^7.0.22",
+    "@types/lodash": "^4.14.73",
+    "@types/mongoose": "^4.7.20",
     "apollo-server-koa": "^1.1.0",
     "graphql": "^0.10.5",
     "graphql-subscriptions": "^0.4.4",
@@ -21,6 +23,9 @@
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.2.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.11.7",
+    "passport": "^0.4.0",
     "ts-node": "^3.3.0",
     "typescript": "^2.4.2"
   },
